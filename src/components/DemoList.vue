@@ -9,12 +9,21 @@ function handleClick(url) {
 </script>
 
 <template>
-  <div class="list">
-    <DemoCard v-for="item in demoList" :title="item.title" :img-url="item.imgUrl" @click="handleClick(item.url)"></DemoCard>
-  </div>
+  <el-scrollbar>
+    <div class="list">
+      <DemoCard v-for="item in demoList" :title="item.title" :img-url="item.imgUrl" @click="handleClick(item.url)"></DemoCard>
+    </div>
+  </el-scrollbar>
 </template>
 
 <style scoped>
 .list{
+  column-count: 5;
+  column-gap: 20px;
+
+  counter-reset: count;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+
 }
 </style>
