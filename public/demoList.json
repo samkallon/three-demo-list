@@ -3,5 +3,10 @@
     "title": "模型光照",
     "imgUrl": "imgs/cover/modelLighting.png",
     "url": "modelLighting"
+  },
+  {
+    "title": "后处理云",
+    "imgUrl": "imgs/cover/modelLighting.png",
+    "url": "clouds"
   }
 ]

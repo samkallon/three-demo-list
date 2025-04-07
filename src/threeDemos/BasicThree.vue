@@ -17,7 +17,8 @@ onMounted(()=>{
   // 定义渲染器是否在渲染每一帧之前自动清除其输出
   renderer.autoClear = true;
   // 定义渲染器的输出编码
-  renderer.outputEncoding = Three.sRGBEncoding;
+  // renderer.outputEncoding = Three.sRGBEncoding;
+  renderer.outputColorSpace = Three.SRGBColorSpace;
   // 初始化场景
   const scene = new Three.Scene();
   const camera = new Three.PerspectiveCamera(35, width / height, 1, 100)
