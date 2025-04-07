@@ -20,7 +20,13 @@ const routes = [
         path: "/basicMesh",
         name: "basicMesh",
         component: () => import("./threeDemos/basicMesh.vue"),
+    },
+    {
+        path: "/postProcessWhirlpool",
+        name: "postProcessWhirlpool",
+        component: () => import("./threeDemos/postProcessWhirlpool/postProcessWhirlpool.vue"),
     }
+
 ]
 
 const options = {

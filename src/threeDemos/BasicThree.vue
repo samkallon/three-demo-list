@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import * as Three from "three";
+import * as THREE from "three";
 import {onMounted} from "vue";
 
 onMounted(()=>{
   const container = document.querySelector('.con') as HTMLElement
   let width = container.clientWidth
   let height = container.clientHeight
-  const renderer = new Three.WebGLRenderer({
+  const renderer = new THREE.WebGLRenderer({
     canvas: container,
     antialias: true,
     alpha: true,
@@ -17,11 +17,12 @@ onMounted(()=>{
   // 定义渲染器是否在渲染每一帧之前自动清除其输出
   renderer.autoClear = true;
   // 定义渲染器的输出编码
-  // renderer.outputEncoding = Three.sRGBEncoding;
-  renderer.outputColorSpace = Three.SRGBColorSpace;
+  // renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
   // 初始化场景
-  const scene = new Three.Scene();
-  const camera = new Three.PerspectiveCamera(35, width / height, 1, 100)
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(35, width / height)
+  camera.position.set(0, 1, 5);
   scene.add(camera)
 
   const tick = () => {
