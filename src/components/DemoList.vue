@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DemoCard from "./DemoCard.vue";
-import demoList from '/public/demoList.json'
+import demoList from '/public/demoList.js'
 import {useRouter} from "vue-router";
 const router = useRouter()
 function handleClick(url) {
